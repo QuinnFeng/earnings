@@ -86,3 +86,57 @@ summary {
 .summary .earning-info {
   margin-left: 0.5rem;
 }
+
+.earning-summary {
+  display: grid;
+  grid-template-columns: 22rem 14rem 14rem;
+  grid-template-rows: repeat(2, auto);
+  border: 1px solid black;
+  width: 50rem;
+}
+
+.earning-summary .cell {
+  border: 1px solid black;
+  padding: 10px;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: var(--font-color-light);
+}
+
+.earning-summary .left {
+  text-align: left;
+}
+
+.earning-summary .right {
+  text-align: right;
+}
+
+.taxes {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* Create 8 equal-width columns */
+  border-collapse: collapse;
+  margin: 1rem 0;
+}
+
+.horizontal-line {
+  grid-column: span 5;
+  border-bottom: 2px solid #000; /* Horizontal line */
+  margin-bottom: 0.125rem;
+}
+.row {
+  display: contents; /* Ensures the rows display correctly inside the grid */
+}
+
+
+/* Style for the header row */
+.header .cell {
+  font-weight: bold;
+}
+
+/* Optional: Add hover effect on rows */
+.row:hover {
+  background-color: #f1f1f1;
+}

@@ -23,11 +23,7 @@ function Statement() {
           <div className="empl">
             <div className="logo">
               <p>Personal Earning Statement</p>
-              <img
-                src={image}
-                alt="logo"
-                className="logo-img"
-              />
+              <img src={image} alt="logo" className="logo-img" />
             </div>
             <div className="empl-info">
               <div className="title">
@@ -78,6 +74,43 @@ function Statement() {
             <span style={{ marginRight: "2.25rem" }}>21.00</span>
             <span style={{ marginRight: "3rem" }}>{hours}</span>
             <span>{amount}</span>
+          </div>
+        </div>
+        <div className="earning-summary">
+          <div className="cell"></div>
+          <div className="cell">
+            <span className="left">Span 1</span>
+            <span className="right">Span 2</span>
+          </div>
+          <div className="cell">Row 1, Col 3</div>
+          <div className="cell"></div>
+          <div className="cell">Row 2, Col 2</div>
+          <div className="cell">Row 2, Col 3</div>
+        </div>
+
+        <div className="taxes">
+          <div className="row header">
+            <div className="cell">Taxes</div>
+            <div className="cell">Exemptions</div>
+            <div className="cell">Additional</div>
+            <div className="cell">Amount</div>
+            <div className="cell">YTD</div>
+          </div>
+          <div class="horizontal-line"></div>
+          <div className="row">
+            <div className="cell">Social Sec.</div>
+            <div className="cell"></div>
+            <div className="cell"></div>
+            <div className="cell"></div>
+            <div className="cell"></div>
+          </div>
+
+          <div className="row">
+            <div className="cell">Bonus</div>
+            <div className="cell">Year-End</div>
+            <div className="cell">12/31/2024</div>
+            <div className="cell">08:00 AM</div>
+            <div className="cell">04:00 PM</div>
           </div>
         </div>
       </section>
