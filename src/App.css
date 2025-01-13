@@ -2,7 +2,7 @@
   --white: #fff;
   --black: #000;
   --font-color-base: #677788;
-  --font-color-light: #f0f0f0;
+  --font-color-light: #f6f6f6;
   --font-color-link: #57a6ff;
   --font-color-blue: #377dff;
   --button-color-blue: #2476ff;
@@ -36,12 +36,15 @@ body {
   letter-spacing: 0;
   color: var(--black);
   margin: 0;
-  padding: 0;
   max-width: 50rem;
   scroll-behavior: smooth;
   font-family: "Inter";
   font-style: normal;
   margin: 0 calc(50% - 25rem);
+}
+
+#root {
+  padding: 0 2.5rem;
 }
 
 *,

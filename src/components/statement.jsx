@@ -23,7 +23,11 @@ function Statement() {
           <div className="empl">
             <div className="logo">
               <p>Personal Earning Statement</p>
-              <img src={image} alt="logo" className="logo-img" />
+              <img
+                src={image}
+                alt="logo"
+                className="logo-img"
+              />
             </div>
             <div className="empl-info">
               <div className="title">
@@ -79,13 +83,22 @@ function Statement() {
         <div className="earning-summary">
           <div className="cell"></div>
           <div className="cell">
-            <span className="left">Span 1</span>
-            <span className="right">Span 2</span>
+            <span className="left">Total Current Hours</span>
+            <span className="right">24.5</span>
           </div>
-          <div className="cell">Row 1, Col 3</div>
+          <div className="cell">
+            <span className="left">Total Current Amount</span>
+            <span className="right">24.5</span>
+          </div>
           <div className="cell"></div>
-          <div className="cell">Row 2, Col 2</div>
-          <div className="cell">Row 2, Col 3</div>
+          <div className="cell">
+            <span className="left">Total YTD Hours</span>
+            <span className="right">52.5</span>
+          </div>
+          <div className="cell">
+            <span className="left">Total YTD Amounts</span>
+            <span className="right">24.5</span>
+          </div>
         </div>
 
         <div className="taxes">
@@ -96,22 +109,95 @@ function Statement() {
             <div className="cell">Amount</div>
             <div className="cell">YTD</div>
           </div>
-          <div class="horizontal-line"></div>
+          <div className="horizontal-line"></div>
           <div className="row">
             <div className="cell">Social Sec.</div>
             <div className="cell"></div>
             <div className="cell"></div>
-            <div className="cell"></div>
-            <div className="cell"></div>
+            <div className="cell">25.82</div>
+            <div className="cell">55.33</div>
           </div>
 
           <div className="row">
-            <div className="cell">Bonus</div>
-            <div className="cell">Year-End</div>
-            <div className="cell">12/31/2024</div>
-            <div className="cell">08:00 AM</div>
-            <div className="cell">04:00 PM</div>
+            <div className="cell">Medicare</div>
+            <div className="cell"></div>
+            <div className="cell"></div>
+            <div className="cell">6.04</div>
+            <div className="cell">12.94</div>
           </div>
+
+          <div className="row">
+            <div className="cell">Federal</div>
+            <div className="cell">Single - 0</div>
+            <div className="cell"></div>
+            <div className="cell">13.57</div>
+            <div className="cell">33.09</div>
+          </div>
+
+          <div className="row">
+            <div className="cell">NJ state</div>
+            <div className="cell">Single - 0</div>
+            <div className="cell"></div>
+            <div className="cell">6.41</div>
+            <div className="cell">14.01</div>
+          </div>
+
+          <div className="row">
+            <div className="cell">NJ SUI EE</div>
+            <div className="cell"></div>
+            <div className="cell"></div>
+            <div className="cell">1.77</div>
+            <div className="cell">3.79</div>
+          </div>
+
+          <div className="row">
+            <div className="cell">NJ FLI EE</div>
+            <div className="cell"></div>
+            <div className="cell"></div>
+            <div className="cell">0.37</div>
+            <div className="cell">0.80</div>
+          </div>
+
+          <div className="row">
+            <div className="cell">NJ Disability</div>
+            <div className="cell"></div>
+            <div className="cell"></div>
+            <div className="cell">0.00</div>
+            <div className="cell">0.00</div>
+          </div>
+          <div className="total">
+            <span>Total Taxes</span>
+            <span>53.98</span>
+            <span>119.96</span>
+          </div>
+        </div>
+
+        <div className="deposit">
+          <div className="row header">
+            <div className="cell">Direct Deposits</div>
+            <div className="cell">ABA No.</div>
+            <div className="cell">Account No.</div>
+            <div className="cell">Amount</div>
+          </div>
+          <div className="horizontal-line"></div>
+          <div className="account-info">
+            <div className="cell">021200025</div>
+            <div className="cell">XXXXXX4308</div>
+            <div className="cell">342.52</div>
+          </div>
+          <div className="total-deposit">
+            <span>Total Direct Deposit</span>
+            <span>342.52</span>
+          </div>
+          <div className="net-pay">
+            <span>Net Pay</span>
+            <span>342.52</span>
+          </div>
+        </div>
+
+        <div className="not-check">
+          <p>This is not a check</p>
+          <p className="rotate">This is not a check</p>
         </div>
       </section>
     </>

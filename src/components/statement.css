@@ -9,7 +9,7 @@
   display: flex;
   width: 100%;
   padding: 0 2rem;
-  margin-top: 5rem;
+  margin-top: 3rem;
 }
 
 .company .comp {
@@ -24,13 +24,17 @@
   text-decoration: solid;
   font-weight: 600;
   color: #000;
-  margin-right: 0.5rem;
-  font-size: 1.25rem;
+  margin-right: 1.25rem;
+  font-size: 1.1rem;
 }
 
 .logo-img {
-  width: 6rem;
+  width: 7rem;
   height: auto;
+}
+
+.empl-info {
+  margin-top: 1rem;
 }
 
 .title {
@@ -89,10 +93,10 @@ summary {
 
 .earning-summary {
   display: grid;
-  grid-template-columns: 22rem 14rem 14rem;
+  grid-template-columns: 20rem 12.5rem 12.5rem;
   grid-template-rows: repeat(2, auto);
   border: 1px solid black;
-  width: 50rem;
+  width: 45rem;
 }
 
 .earning-summary .cell {
@@ -114,11 +118,13 @@ summary {
   text-align: right;
 }
 
-.taxes {
+.taxes,
+.deposit {
   display: grid;
-  grid-template-columns: repeat(5, 1fr); /* Create 8 equal-width columns */
+  grid-template-columns: 1.35fr repeat(4, 1fr); /* Create 8 equal-width columns */
   border-collapse: collapse;
   margin: 1rem 0;
+  width: 55%;
 }
 
 .horizontal-line {
@@ -130,13 +136,88 @@ summary {
   display: contents; /* Ensures the rows display correctly inside the grid */
 }
 
-
 /* Style for the header row */
 .header .cell {
   font-weight: bold;
+  white-space: nowrap; /* Prevent line breaks */
 }
 
-/* Optional: Add hover effect on rows */
-.row:hover {
-  background-color: #f1f1f1;
+.row .cell:nth-last-child(-n + 2),
+.total span:nth-last-child(-n + 2),
+.account-info .cell:last-child {
+  text-align: right;
+}
+
+.row .cell:nth-child(3) {
+  text-align: center;
+}
+
+.taxes .total {
+  grid-column: 2 / span 4;
+  border-top: 2px solid #000;
+  border-bottom: 2px solid #000;
+  background-color: var(--font-color-light);
+  font-weight: 600;
+  line-height: 1.4;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  border-collapse: collapse;
+}
+
+.deposit {
+  grid-template-columns: 1.35fr repeat(3, 1.33fr);
+}
+
+.deposit .account-info {
+  grid-column: 2 / span 3;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.total-deposit {
+  grid-column: 2 / span 3;
+}
+
+.net-pay {
+  grid-column: span 4;
+  margin-top: 1rem;
+}
+
+.total-deposit,
+.net-pay {
+  display: flex;
+  border-top: 2px solid #000;
+  border-bottom: 2px solid #000;
+  background-color: var(--font-color-light);
+}
+
+.total-deposit span:first-child,
+.net-pay span:first-child {
+  margin-right: auto;
+}
+
+.not-check {
+  position: relative;
+  height: 40rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.not-check p:first-child {
+  font-weight: 600;
+  font-size: 3rem;
+}
+
+.rotate {
+  position: absolute;
+  /* left: 26.33rem;
+  top: 16.4rem; */
+  transform: rotate(-15deg);
+  font-size: 5.5rem;
+  font-weight: 600;
+  color: #c8c8c8;
+  text-wrap: nowrap;
+  z-index: -1;
 }
